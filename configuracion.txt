@@ -1,0 +1,35 @@
+
+setup-xorg-base
+driver de videos
+slim
+xinit
+icewm
+networkmanager
+feh
+pcmanfm
+pulseaudio
+setxkbmap
+
+
+
+
+en /home/usuario
+
+#configurar inicio de sesión en el archivo .xinitrc
+setxkbmap es
+exec icewm-session
+
+chmod +x ~/.xinitrc
+#configurar todo el inicio en .icewm/startup
+
+
+#!/bin/sh
+#fondo de pantalla 
+feh -bg--scale /home/usuario/fondo.png &
+
+#configurar nm applet de network manager
+
+nm-applet &
+
+
+chmod +x ~/.icewm/startup
